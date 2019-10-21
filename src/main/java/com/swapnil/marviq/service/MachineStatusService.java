@@ -167,7 +167,7 @@ public class MachineStatusService {
      * @param to
      * @return
      */
-    private List<ProductionData> getProdData(LocalDateTime from, LocalDateTime to) {
+    public List<ProductionData> getProdData(LocalDateTime from, LocalDateTime to) {
         List<ProductionData> data = null;
         try {
             data = prodDao.getData(from, to);
@@ -184,7 +184,7 @@ public class MachineStatusService {
      * @param to
      * @return
      */
-    private Map<String, RuntimeData> getRunData(LocalDateTime from, LocalDateTime to) {
+    public Map<String, RuntimeData> getRunData(LocalDateTime from, LocalDateTime to) {
         Map<String, RuntimeData> data = null;
         try {
             data = runDao.getData(from, to);
